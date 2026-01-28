@@ -1,0 +1,3 @@
+c1c(cc(c(c1C(O)=O)N)[Cl])[Cl]
+COc1ccccc1OCC(CO)O
+C(CN1CCOCC1)N

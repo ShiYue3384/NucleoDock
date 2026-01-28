@@ -1,0 +1,40 @@
+MODEL:
+  TASK: 'DOCKING'
+  NAME: 'NucleoDock'
+  MLM_PROB: 0.15
+  SEED: 42
+  IS_ORIGIN: False
+  PRECISION: bf16
+  THRESHOLD: 8.0
+  RECYCLING: 3
+  rna_input_dim: 771 
+  rna_embed_dim: 128
+  rna_gcn_depth: 3
+  RNA_PDB_ID_FIELD: "pocket_name"          
+               
+
+DATALOADER:
+  NUM_WORKERS: 8
+
+SOLVER:
+  TRAIN_BSZ: 2
+  VALID_BSZ: 8
+  MAX_EPOCHS: 100
+  WEIGHT_DECAY: 1e-6
+  OPTIMIZER_NAME: 'AdamW'
+  MAX_STEPS: 0
+  WARMUP_FACTOR: 1e-5
+  BASE_LR: 1e-4   
+data:
+  rna_graph_path: 
+  path: 'filter6_9'
+  nthreads: 20
+  dist_threshold: 10.0
+  beta: 1.0
+  smooth: 0.1
+  topN: 10
+  max_atoms: 500
+  dict_name: "dict.txt"
+  conf_size: 10
+  max_pocket_atoms: 256
+  max_seq_len: 530
