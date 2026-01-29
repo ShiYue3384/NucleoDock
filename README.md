@@ -5,7 +5,6 @@
 Cs
 
 ## Environment
-We tested the code in the following docker environment on H800 GPU machine.
 
 Build 
 
@@ -18,56 +17,28 @@ docker run -v ./:/Docking --gpus all carsidock:v1 \
 
 ## Docking
 
-**redocking**
+**docking/screening**
 
 ```shell
-docker run -v ./:/Docking --gpus all carsidock:v1 \
-  python /Docking/run_docking_inference.py \
-  --pdb_file example_data/4YKQ_hsp90_40_water.pdb \
-  --sdf_file example_data/4YKQ_hsp90_40.sdf \
+python  inference_graph.py \
+  --config "RNA_graph_presentation.yml" \
+  --input "inputs" \
+  --ligands "inputs/candidates.txt" \
+  --ckpt_path "checkpoints/graph_99.ckpt" \
+  --output_dir "outputs/screening_result" \
+  --num_threads 1 \
   --cuda_convert
 ```
 
-**decoys docking**
 
-```shell
-docker run -v ./:/Docking --gpus all carsidock:v1 \
-  python /Docking/run_docking_inference.py \
-  --pdb_file example_data/4YKQ_hsp90_40_water.pdb \
-  --sdf_file example_data/4YKQ_hsp90_40.sdf \
-  --smiles_file example_data/smiles.txt \
-  --output_dir outputs/4ykq \
-  --cuda_convert
-```
 
-The docking conformation will be stored in the outputs/4ykq folder with ${inchi_key}.sdf as the file name.
+The docking conformation will be stored in the outputs/screening_result folder with .sdf as the file name.
+The score table will be stored in the outputs/screeing_outputs folder with score.dat as the file name. 
 
 ## Screening
 The score table will be stored in the outputs/ace folder with score.dat as the file name. 
 
-**sdf decoys**
 
-```shell
-docker run -v ./:/Docking --gpus all --shm-size 16g carsidock:v1 \
-  python /Docking/run_screening.py \
-  --pdb_file example_data/ace_p.pdb \
-  --reflig example_data/ace_l.sdf \
-  --ligands example_data/ace_decoys.sdf \
-  --output_dir outputs/ace \
-  --cuda_convert
-```
-
-**smiles decoys**
-
-```shell
-docker run -v ./:/Docking --gpus all --shm-size 16g carsidock:v1 \
-  python /Docking/run_screening.py \
-  --pdb_file example_data/ace_p.pdb \
-  --reflig example_data/ace_l.sdf \
-  --ligands example_data/smiles.txt \
-  --output_dir outputs/ace \
-  --cuda_convert
-```
 
 
 ## License
