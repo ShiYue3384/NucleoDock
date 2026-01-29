@@ -39,7 +39,7 @@ SOLVER:
 
 WANDB:
 #  KEY: ''
-  KEY: '494def72eaf3d56f1ae73c659007c49aa4accc82'
+  KEY: ''
 
-OUTPUT_DIR: "/home/shili/Dict/Tensor_borad"
+OUTPUT_DIR: ''
 

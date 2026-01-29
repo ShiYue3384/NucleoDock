@@ -136,7 +136,7 @@ def flush_results(results, output_dir):
     if "score" in df.columns:
         df = df.sort_values(by="score", ascending=True)
     
-    final_path = os.path.join(out_dir_abs, "carsidock_score.dat")
+    final_path = os.path.join(out_dir_abs, "score.dat")
     tmp_path = final_path + ".tmp"
     df.to_csv(tmp_path, index=False, sep="\t")
     os.replace(tmp_path, final_path)
@@ -168,7 +168,7 @@ def main(args):
         raise FileNotFoundError(f"Missing pocket.sdf in {args.input_dir}")
     
 
-    carsidock_pocket = read_mol(pocket_sdf_path)[0]
+    pocket = read_mol(pocket_sdf_path)[0]
     
     rna_pkl_path = os.path.join(args.input_dir, "rna_data.pkl")
     with open(rna_pkl_path, 'rb') as f:
@@ -219,7 +219,7 @@ def main(args):
             
             outputs = docking(
                 model, 
-                carsidock_pocket, 
+                pocket, 
                 init_mol_list, 
                 mol_dict, 
                 pocket_dict, 
