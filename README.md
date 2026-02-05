@@ -1,6 +1,6 @@
 # NucleoDock
 **NucleoDock: A pretrained deep learning framework for sequence- and structure-aware nucleic acid–ligand docking and screening**
-
+![Overview](image/framework.png)
 ## Abstract
 Nucleic acids, including DNA and RNA, have emerged as critical therapeutic targets, offering substantial potential in drug discovery alongside traditional protein-based methods. Modulating nucleic acid function through small-molecule interactions enables the regulation of gene expression and disease pathways. However, experimental screening of nucleic acid targets remains highly resource-intensive, demanding significant time, cost, and labor. This has led to a gap in the development of efficient computational tools. Here, we present NucleoDock, the first deep learning framework designed for nucleic acid–small molecule docking. NucleoDock integrates both structure- and sequence-informed representations, operating at atomic and nucleotide levels. It combines an MDN-based geometric scoring mechanism with data augmentation from synthetic docking complexes. In benchmark evaluations, NucleoDock outperforms traditional methods, such as rDock, by 20% in top 1 conformation prediction. However, its performance in virtual screening is still limited. NucleoDock represents a significant step forward in computational drug discovery, offering a robust, data-driven tool for virtual screening and conformation prediction of nucleic acid targets.
 
