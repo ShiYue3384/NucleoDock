@@ -8,7 +8,7 @@ Nucleic acids, including DNA and RNA, have emerged as critical therapeutic targe
 
 We provide two separate Conda environments: one for **data preparation** and one for **inference**.
 
-### 1) Data Preparation Environment
+**1)Data Preparation Environment**
 
 During the data preparation stage, create the environment using `data/envir/environment_prep.yml` and install additional pip dependencies from `data/envir/data_prep_requirements.txt`:
 
@@ -18,7 +18,7 @@ conda activate data_prep
 pip install -r data/envir/data_prep_requirements.txt
 
 ```
-### 2) Inference
+**2)Inference**
 
 For inference, create the environment using environment.yml and install pip dependencies from requirements.txt:
 ```bash
