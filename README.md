@@ -60,8 +60,6 @@ python  inference_graph.py \
 ```
 
 
-**Docking/screening**   
-
 The docking conformation will be stored in the ```outputs/screening_result``` folder with .sdf as the file name.
 The score table will be stored in the ```outputs/screeing_outputs ``` folder with ```score.dat``` as the file name. 
  
