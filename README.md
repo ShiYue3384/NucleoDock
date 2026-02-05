@@ -29,7 +29,6 @@ pip install -r requirements.txt
 #### Python Version Recommendation (Important)
 
 We recommend using Python 3.8.
-
 After the inference environment is installed, manually copy the following two items into the site-packages directory of the inference2 environment:
 ```
 data/envir/pydock
@@ -45,8 +44,6 @@ Note: The exact site-packages path may vary depending on your Conda installation
 python -c "import site; print(site.getsitepackages())"
 ```
 ## Docking/screening
-
-**docking/screening**
 
 ```shell
 python  inference_graph.py \
