@@ -62,7 +62,7 @@ The score table will be stored in the ```outputs/screeing_outputs ``` folder wit
  
 
 ## License
-The code of this repository is licensed under [Apache Licence 2.0](https://www.apache.org/licenses/LICENSE-2.0). The NucleoDock model weights are distributed under a separate [Model License](./MODEL_LICENSE.txt) and are available for academic research subject to the terms of that license.
+The code of this repository is licensed under [Apache Licence 2.0](https://www.apache.org/licenses/LICENSE-2.0). The NucleoDock model weights are distributed under a separate [Model License](./LICENSE.txt) and are available for academic research subject to the terms of that license.
 
 ## Checkpoints
 
