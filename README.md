@@ -62,7 +62,7 @@ The score table will be stored in the ```outputs/screeing_outputs ``` folder wit
  
 
 ## License
-The code of this repository is licensed under [Aapache Licence 2.0](https://www.apache.org/licenses/LICENSE-2.0). The use of the NucleoDock model weights is subject to the [Model License](./MODEL_LICENSE.txt). NucleoDock weights are completely open for academic research.
+The code of this repository is licensed under [Apache Licence 2.0](https://www.apache.org/licenses/LICENSE-2.0). The NucleoDock model weights are distributed under a separate [Model License](./MODEL_LICENSE.txt) and are available for academic research subject to the terms of that license.
 
 ## Checkpoints
 
@@ -70,7 +70,7 @@ If you agree to the above license, please download checkpoints from the followin
 
 The ckpt of Nt-v2 and rnafm can be downloaded from https://huggingface.co/InstaDeepAI/nucleotide-transformer-v2-250m-multi-species and https://github.com/ml4bio/RNA-FM 
 
-The ckpt of NucleoDock can be downloaded from 
+The ckpt of NucleoDock can be downloaded from release.
 
 
 
